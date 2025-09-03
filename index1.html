@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos y Tutoriales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; background: #eef2f3; margin: 0; padding: 0;}
+        header { background: #2980b9; color: white; padding: 1rem; text-align: center; }
+        main { padding: 2rem; max-width: 800px; margin: auto;}
+        .curso { background: white; margin-bottom: 2rem; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.07);}
+        h2 { color: #2980b9; }
+        ul, ol { padding-left: 1.2rem;}
+        .info-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .info-btn:hover {
+            background: #145078;
+        }
+        .mas-info {
+            display: none;
+            background: #f2f6fa;
+            border-left: 3px solid #2980b9;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            font-size: 0.98rem;
+        }
+    </style>
+    <script>
+        function mostrarInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cursos y Tutoriales Gratis</h1>
+        <p>Aprende nuevas habilidades con estos cursos sencillos y prácticos.</p>
+    </header>
+    <main>
+        <section class="curso">
+            <h2>1. Introducción a la Programación en Python</h2>
+            <h3>¿Qué aprenderás?</h3>
+            <ul>
+                <li>Conceptos básicos de programación</li>
+                <li>Sintaxis de Python</li>
+                <li>Variables, operadores y estructuras de control</li>
+            </ul>
+            <h3>Lección de ejemplo:</h3>
+            <ol>
+                <li>Instala Python desde python.org.</li>
+                <li>Escribe tu primer programa: <code>print("Hola, mundo!")</code></li>
+                <li>Aprende a crear variables y usar condicionales (<code>if</code>, <code>else</code>).</li>
+            </ol>
+            <button class="info-btn" onclick="mostrarInfo('info-python')">Más información</button>
+            <div id="info-python" class="mas-info">
+                <strong>¿Por qué aprender Python?</strong><br>
+                Python es uno de los lenguajes de programación más populares y fáciles de aprender, ideal para principiantes y usado en áreas como ciencia de datos, inteligencia artificial y desarrollo web.<br>
+                <a href="https://www.python.org/" target="_blank">Sitio oficial de Python</a>
+            </div>
+        </section>
+        <section class="curso">
+            <h2>2. Curso Básico de Inglés</h2>
+            <h3>¿Qué aprenderás?</h3>
+            <ul>
+                <li>Saludos y presentaciones</li>
+                <li>Vocabulario esencial</li>
+                <li>Frases cotidianas</li>
+            </ul>
+            <h3>Lección de ejemplo:</h3>
+            <ol>
+                <li>Aprende los saludos: "Hello", "Good morning", "Good night".</li>
+                <li>Presentarte: "My name is Ana. I am from Chile."</li>
+                <li>Frases para preguntar: "How are you?", "Where are you from?"</li>
+            </ol>
+            <button class="info-btn" onclick="mostrarInfo('info-ingles')">Más información</button>
+            <div id="info-ingles" class="mas-info">
+                <strong>¿Por qué aprender inglés?</strong><br>
+                El inglés es el idioma más usado en el mundo para los negocios, la tecnología y viajes. Aprenderlo te abrirá más oportunidades personales y profesionales.<br>
+                <a href="https://www.duolingo.com/" target="_blank">Practica en Duolingo</a>
+            </div>
+        </section>
+        <section class="curso">
+            <h2>3. Fotografía para Principiantes</h2>
+            <h3>¿Qué aprenderás?</h3>
+            <ul>
+                <li>Manejo básico de la cámara</li>
+                <li>Composición fotográfica</li>
+                <li>Edición sencilla de imágenes</li>
+            </ul>
+            <h3>Lección de ejemplo:</h3>
+            <ol>
+                <li>Conoce las partes de tu cámara y sus funciones.</li>
+                <li>Practica la regla de los tercios para encuadrar tus fotos.</li>
+                <li>Edita usando apps gratuitas como Snapseed o Lightroom Mobile.</li>
+            </ol>
+            <button class="info-btn" onclick="mostrarInfo('info-foto')">Más información</button>
+            <div id="info-foto" class="mas-info">
+                <strong>¿Por qué aprender fotografía?</strong><br>
+                La fotografía es una forma creativa de capturar momentos, contar historias y expresar ideas. Además, puedes desarrollar habilidades técnicas y artísticas.<br>
+                <a href="https://www.youtube.com/watch?v=7b7oYfGkK7g" target="_blank">Tutorial básico en YouTube</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

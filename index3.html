@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mascotas y Animales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; background: #fdf6e3; margin: 0; padding: 0;}
+        header { background: #e67e22; color: #fff; padding: 2rem 1rem; text-align: center; }
+        main { max-width: 900px; margin: auto; padding: 2rem 1rem;}
+        .mascota { background: #fff; margin-bottom: 2rem; padding: 1.5rem 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(230,126,34,0.08);}
+        .subtitulo {
+            background: #ffe0b2;
+            color: #e67e22;
+            font-weight: bold;
+            padding: 0.6rem 1rem;
+            border-radius: 7px;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            box-shadow: 0 1px 6px rgba(230,126,34,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .lista-animales {
+            display: none;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            background: #fff5e1;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(230,126,34,0.05);
+        }
+        .btn-lista {
+            background: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 0.3rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-lista:hover {
+            background: #b45f06;
+        }
+        ul { padding-left: 1.2rem;}
+    </style>
+    <script>
+        function mostrarLista(id) {
+            var lista = document.getElementById(id);
+            if (lista.style.display === "none" || lista.style.display === "") {
+                lista.style.display = "block";
+            } else {
+                lista.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Mascotas y Animales</h1>
+        <p>Información y consejos para cuidar a tus amigos peludos.</p>
+    </header>
+    <main>
+        <section class="mascota">
+            <div class="subtitulo">
+                Perros: Compañeros fieles
+                <button class="btn-lista" onclick="mostrarLista('lista-perros')">Ver razas/comunes</button>
+            </div>
+            <div id="lista-perros" class="lista-animales">
+                <ul>
+                    <li>Labrador Retriever</li>
+                    <li>Pastor Alemán</li>
+                    <li>Pug</li>
+                    <li>Beagle</li>
+                    <li>Golden Retriever</li>
+                </ul>
+            </div>
+            <ul>
+                <li>Necesitan ejercicio diario y socialización.</li>
+                <li>Alimentación adecuada según tamaño y edad.</li>
+                <li>Visitas regulares al veterinario.</li>
+            </ul>
+        </section>
+        <section class="mascota">
+            <div class="subtitulo">
+                Gatos: Independientes y cariñosos
+                <button class="btn-lista" onclick="mostrarLista('lista-gatos')">Ver razas/comunes</button>
+            </div>
+            <div id="lista-gatos" class="lista-animales">
+                <ul>
+                    <li>Siamés</li>
+                    <li>Persa</li>
+                    <li>Maine Coon</li>
+                    <li>Europeo</li>
+                    <li>Bengala</li>
+                </ul>
+            </div>
+            <ul>
+                <li>Proporciona un espacio seguro y limpio.</li>
+                <li>Juguetes y rascadores para estimular su actividad.</li>
+                <li>Control de vacunas y desparasitaciones.</li>
+            </ul>
+        </section>
+        <section class="mascota">
+            <div class="subtitulo">
+                Animales exóticos
+                <button class="btn-lista" onclick="mostrarLista('lista-exoticos')">Ver ejemplos</button>
+            </div>
+            <div id="lista-exoticos" class="lista-animales">
+                <ul>
+                    <li>Hámster</li>
+                    <li>Iguana</li>
+                    <li>Tortuga</li>
+                    <li>Loro</li>
+                    <li>Erizo africano</li>
+                </ul>
+            </div>
+            <ul>
+                <li>Investiga bien antes de adoptar especies no convencionales.</li>
+                <li>Consulta siempre con expertos para su cuidado.</li>
+                <li>Respeta sus necesidades de espacio y alimentación.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

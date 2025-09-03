@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Charlas Creativas: Podcast y Videoblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 0;}
+        header { background: #212f3d; color: #fff; padding: 2rem 1rem; text-align: center; }
+        header img { width: 120px; border-radius: 50%; margin-bottom: 1rem;}
+        main { max-width: 900px; margin: auto; padding: 2rem 1rem;}
+        .section { background: #fff; margin-bottom: 2rem; padding: 1.5rem 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(33,47,61,0.08);}
+        h2, h3 { color: #283747; }
+        .episodes { display: flex; flex-wrap: wrap; gap: 2rem; }
+        .episode { flex: 1 1 280px; background: #eef2f7; border-radius: 7px; padding: 1rem 1rem 1.5rem 1rem; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(33,47,61,0.07);}
+        .episode img { width: 100%; border-radius: 7px; margin-bottom: 0.5rem;}
+        .calendar { background: #d6eaf8; border-left: 5px solid #2980b9; padding: 1rem; border-radius: 7px; margin-bottom: 2rem;}
+        .formulario { background: #fcf3cf; border-left: 5px solid #f1c40f; padding: 1rem; border-radius: 7px;}
+        label { display: block; margin-top: 0.7rem;}
+        input, textarea { width: 100%; margin-top: 0.3rem; padding: 0.5rem; border: 1px solid #bbb; border-radius: 4px;}
+        button { margin-top: 1rem; background: #2980b9; color: #fff; border: none; padding: 0.5rem 1.2rem; border-radius: 5px; cursor: pointer; font-size: 1rem;}
+        button:hover { background: #145078; }
+        @media (max-width: 600px) {
+            .episodes { flex-direction: column; }
+            main { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=120&q=80" alt="Micrófono Podcast">
+        <h1>Charlas Creativas</h1>
+        <p>Podcast y Videoblog sobre creatividad, arte y emprendimiento</p>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Últimos Episodios</h2>
+            <div class="episodes">
+                <div class="episode">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Podcast Episodio">
+                    <h3>Episodio 21: Inspiración para Emprendedores</h3>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                        Tu navegador no soporta audio.
+                    </audio>
+                    <p>Entrevista con Laura Gómez, fundadora de CreativaLab, sobre cómo encontrar inspiración y vencer el miedo al fracaso.</p>
+                </div>
+                <div class="episode">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Videoblog Episodio">
+                    <h3>Videoblog: Consejos para Ilustradores</h3>
+                    <video controls width="100%">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta video.
+                    </video>
+                    <p>Descubre técnicas para mejorar tu portafolio y destacar en redes sociales.</p>
+                </div>
+                <div class="episode">
+                    <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="Podcast Episodio">
+                    <h3>Episodio 22: El poder de las historias</h3>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+                        Tu navegador no soporta audio.
+                    </audio>
+                    <p>Charlamos con el escritor Martín Ríos sobre cómo contar historias auténticas en medios digitales.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section calendar">
+            <h2>Calendario de Próximos Episodios</h2>
+            <ul>
+                <li><strong>Viernes 6 Septiembre, 19:00</strong> — Videoblog: Fotografía con Smartphone</li>
+                <li><strong>Martes 10 Septiembre, 20:00</strong> — Podcast: Creatividad y salud mental</li>
+                <li><strong>Viernes 13 Septiembre, 19:00</strong> — Videoblog: Diseño gráfico para principiantes</li>
+            </ul>
+        </section>
+        <section class="section formulario">
+            <h2>Envía tu Pregunta o Comentario</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="mensaje">Mensaje o pregunta:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
